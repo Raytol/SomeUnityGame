@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class AgentAI : MonoBehaviour
 {
     private NavMeshAgent _navMeshAgent;
-    private float changePosTime = 5f;
-    private float MoveDistance = 10f;
+    private float changePosTime = 2f;
+    private float MoveDistance = 30f;
     private float rotationSpeed;
     private Transform agentTransform;
 
@@ -23,7 +23,7 @@ public class AgentAI : MonoBehaviour
         _navMeshAgent.updateRotation = false;
         rotationSpeed = _navMeshAgent.angularSpeed;
         agentTransform = _navMeshAgent.transform;
-        //InvokeRepeating(nameof(AImove), changePosTime, changePosTime);
+        InvokeRepeating(nameof(AImove), changePosTime, changePosTime);
 
     }
 
@@ -33,7 +33,7 @@ public class AgentAI : MonoBehaviour
         if (distanceToPlayer <= DetectionDistance || IsInView())
         {
             RotateToTarget();
-            AImove();
+            move();
         }
     }
 
@@ -48,11 +48,15 @@ public class AgentAI : MonoBehaviour
 
     private void AImove()
     {
+        _navMeshAgent.SetDestination(RandomNavSphere(MoveDistance));  
+    }
+
+    private void move()
+    {
         if (IsInView())
         {
             _navMeshAgent.SetDestination(Player.position);
         }
-        _navMeshAgent.SetDestination(RandomNavSphere(MoveDistance));
     }
 
     private bool IsInView()

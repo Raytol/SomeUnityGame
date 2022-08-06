@@ -32,10 +32,10 @@ public class Player_Move : MonoBehaviour
         {
             move_Direction = new Vector3(x_Move, 0f, z_Move);
             move_Direction = transform.TransformDirection(move_Direction);
-            if (Input.GetKey(KeyCode.Space))
-            {
-                move_Direction.y += jump;
-            }
+            //if (Input.GetKey(KeyCode.Space))
+            //{
+            //    move_Direction.y += jump;
+            //}
             if (Input.GetKey(KeyCode.LeftControl))
             {
                 player.height = 1.5f;
