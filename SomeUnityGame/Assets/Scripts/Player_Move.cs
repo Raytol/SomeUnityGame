@@ -6,6 +6,7 @@ public class Player_Move : MonoBehaviour
 {
     public float speed_Move;
     public float speed_Run;
+    public float speed_Seat;
     public float speed_Current;
     public float jump;
     public float gravity;
@@ -39,6 +40,7 @@ public class Player_Move : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftControl))
             {
                 player.height = 1.5f;
+                speed_Current = speed_Seat;
             }
             else
             {
