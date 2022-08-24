@@ -700,6 +700,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: alien
       objectReference: {fileID: 0}
+    - target: {fileID: 5465940246521907071, guid: 1bff699909c1f5b4481c030d59a39dee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.065
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465940246521907071, guid: 1bff699909c1f5b4481c030d59a39dee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.933
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465940246521907071, guid: 1bff699909c1f5b4481c030d59a39dee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.032
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 1bff699909c1f5b4481c030d59a39dee, type: 3}
       propertyPath: m_Controller
       value: 
@@ -1437,7 +1449,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223666518}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d58c8de3bbddd042a486046e740188b, type: 3}
   m_Name: 
