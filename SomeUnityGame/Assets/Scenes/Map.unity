@@ -1868,7 +1868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 739668b283f4e1540827e5e014d0e137, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 460.61246
+      value: 465.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 739668b283f4e1540827e5e014d0e137, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1876,7 +1876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 739668b283f4e1540827e5e014d0e137, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 612.81915
+      value: 612.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 739668b283f4e1540827e5e014d0e137, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1916,7 +1916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 739668b283f4e1540827e5e014d0e137, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 739668b283f4e1540827e5e014d0e137, type: 3}
       propertyPath: m_Controller
@@ -2789,7 +2789,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1987943854
+--- !u!114 &1987943857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2798,26 +2798,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1987943850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 643aad39515a3624386143bd79675325, type: 3}
+  m_Script: {fileID: 11500000, guid: bd49f4beb1fd7454298a955f8fd6d8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ViewAngle: 90
-  ViewDistance: 15
-  DetectionDistance: 3
+  M: 0
+  LastPos: {x: 0, y: 0, z: 0}
+  ViewAngle: 360
+  ViewDistance: 100
+  DetectionDistance: 100
   AgentBobby: {fileID: 1987943852}
   Player: {fileID: 208401867}
---- !u!114 &1987943855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987943850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf09fcdc0909534fbdc1128a3119ad7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2088270222
 GameObject:
   m_ObjectHideFlags: 0
