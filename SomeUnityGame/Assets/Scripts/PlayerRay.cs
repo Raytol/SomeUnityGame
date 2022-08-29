@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerRay : MonoBehaviour
 {
     public float range = 30f;
-
+    public GameObject Book;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -20,6 +21,10 @@ public class PlayerRay : MonoBehaviour
         if(Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+            if(hit.collider.gameObject == Book)
+            {
+                Book.SetActive(false);
+            }
         }
     }
 }

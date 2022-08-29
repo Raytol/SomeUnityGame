@@ -16,6 +16,7 @@ public class AgentAI : MonoBehaviour
     public float DetectionDistance = 3f;
     public Transform AgentBobby;
     public Transform Player;
+    public float distanceToPlayer;
 
     private void Start()
     {
@@ -27,9 +28,9 @@ public class AgentAI : MonoBehaviour
 
     }
 
-    private void Update()
+    public void Update()
     {
-        float distanceToPlayer = Vector3.Distance(Player.transform.position, _navMeshAgent.transform.position);
+        float distanceToPlayer = Vector3.Distance(Player.position, _navMeshAgent.transform.position);
         if (distanceToPlayer <= DetectionDistance || IsInView())
         {
             RotateToTarget();
