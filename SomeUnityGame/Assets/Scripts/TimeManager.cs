@@ -33,8 +33,13 @@ public class TimeManager : MonoBehaviour
                 minute2 = 0;
                 if (minute1 == 6)
                 {
-                    hour1 += 1;
+                    hour2 += 1;
                     minute1 = 0;
+                    if (hour2 == 10)
+                    {
+                        hour1 += 1;
+                        hour2 = 0;
+                    } 
                 }
             }
         }
