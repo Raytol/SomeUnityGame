@@ -26,11 +26,10 @@ public class Player_Move : MonoBehaviour
     public bool run_gone = false;
     public bool audioW = false;
     public int run_timeP;
-    public int run_time;
+    public int run_time;s
 
     void Start()
     {
-        
         animator = GetComponent<Animator>();
         m_MyAudioSource = GetComponent<AudioSource>();
         run_time = run_timeP;
@@ -74,7 +73,7 @@ public class Player_Move : MonoBehaviour
                 speed_Current = speed_Seat;
             }
             else
-            {
+            { 
                 crunched = false;
                 animator.SetBool("crouche", false);
                 player.height = 2f;
