@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+
+    AudioSource m_MyAudioSource;
+
     public float speed_Move;
     public float speed_Run;
     public float speed_Seat;
@@ -14,10 +17,17 @@ public class Player_Move : MonoBehaviour
     float z_Move;
     CharacterController player;
     Vector3 move_Direction;
-
+    public bool run_gone = false;
+    public bool audioW = false;
+    public int run_timeP;
+    public int run_time;
+    
     void Start()
     {
+        m_MyAudioSource = GetComponent<AudioSource>();
+        run_time = run_timeP;
         player = GetComponent<CharacterController>();
+        m_MyAudioSource.Stop();
     }
 
     void Update()
@@ -39,7 +49,7 @@ public class Player_Move : MonoBehaviour
             //}
             if (Input.GetKey(KeyCode.LeftControl))
             {
-                player.height = 1.5f;
+                player.height = 1.0f;
                 speed_Current = speed_Seat;
             }
             else
@@ -48,13 +58,39 @@ public class Player_Move : MonoBehaviour
             }
         } 
         move_Direction.y -= gravity;
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (run_gone == false && Input.GetKey(KeyCode.LeftShift) && run_time <= run_timeP && run_time > 0)
         {
+            print("1");
+            m_MyAudioSource.Stop();
+            run_time = run_time - 2;
             speed_Current = speed_Run;
+            if (run_time == 0)
+            {
+                audioW = true;
+                run_gone = true;
+            }
+
         }
         else
         {
+            print("2");
             speed_Current = speed_Move;
+            if (run_time >= 0 && run_time < run_timeP && run_gone == true)
+            {
+                if (audioW == true)
+                {
+                    audioW = false;
+                    m_MyAudioSource.Play();
+                }
+                
+                print("3");
+                run_time = run_time + 1;
+                if (run_time == run_timeP)
+                {
+                    m_MyAudioSource.Stop();
+                    run_gone = false;
+                }
+            }
         }
         player.Move(move_Direction * speed_Current * Time.deltaTime);
     }
