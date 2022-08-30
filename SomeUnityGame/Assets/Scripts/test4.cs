@@ -81,7 +81,6 @@ public class test4 : MonoBehaviour
 
             case 3f:
                 print("case 3");
-                animator.SetFloat("x", X);
                 animator.SetFloat("y", Y);
                 animaW();
                 if (distanceToPlayer <= DetectionDistance || IsInView())

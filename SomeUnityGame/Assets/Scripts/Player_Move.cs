@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
-
     AudioSource m_MyAudioSource;
 
     public float speed_Move;
@@ -21,7 +20,7 @@ public class Player_Move : MonoBehaviour
     public bool audioW = false;
     public int run_timeP;
     public int run_time;
-    
+
     void Start()
     {
         m_MyAudioSource = GetComponent<AudioSource>();
@@ -56,11 +55,10 @@ public class Player_Move : MonoBehaviour
             {
                 player.height = 2f;
             }
-        } 
+        }
         move_Direction.y -= gravity;
         if (run_gone == false && Input.GetKey(KeyCode.LeftShift) && run_time <= run_timeP && run_time > 0)
         {
-            print("1");
             m_MyAudioSource.Stop();
             run_time = run_time - 2;
             speed_Current = speed_Run;
@@ -73,7 +71,6 @@ public class Player_Move : MonoBehaviour
         }
         else
         {
-            print("2");
             speed_Current = speed_Move;
             if (run_time >= 0 && run_time < run_timeP && run_gone == true)
             {
@@ -82,7 +79,7 @@ public class Player_Move : MonoBehaviour
                     audioW = false;
                     m_MyAudioSource.Play();
                 }
-                
+
                 print("3");
                 run_time = run_time + 1;
                 if (run_time == run_timeP)
