@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+    public Animator animator;
+    public float Y = -1f;
+    public float Z = 0f;
+    public bool Stay = false;
+
+    private bool crunched;
+
     AudioSource m_MyAudioSource;
 
     public float speed_Move;
@@ -23,6 +30,8 @@ public class Player_Move : MonoBehaviour
 
     void Start()
     {
+        
+        animator = GetComponent<Animator>();
         m_MyAudioSource = GetComponent<AudioSource>();
         run_time = run_timeP;
         player = GetComponent<CharacterController>();
@@ -36,6 +45,17 @@ public class Player_Move : MonoBehaviour
 
     void Move()
     {
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            Stay = false;
+        }
+        else
+        {
+            animaI();
+            Stay = true;
+        }
+
+
         x_Move = Input.GetAxis("Horizontal");
         z_Move = Input.GetAxis("Vertical");
         if (player.isGrounded)
@@ -48,17 +68,22 @@ public class Player_Move : MonoBehaviour
             //}
             if (Input.GetKey(KeyCode.LeftControl))
             {
-                player.height = 1.0f;
+                crunched = true;
+                animator.SetBool("crouche", true);
+                player.height = 0.5f;
                 speed_Current = speed_Seat;
             }
             else
             {
+                crunched = false;
+                animator.SetBool("crouche", false);
                 player.height = 2f;
             }
         }
         move_Direction.y -= gravity;
-        if (run_gone == false && Input.GetKey(KeyCode.LeftShift) && run_time <= run_timeP && run_time > 0)
+        if (run_gone == false && crunched == false && Input.GetKey(KeyCode.LeftShift) && run_time <= run_timeP && run_time > 0)
         {
+            animaR();
             m_MyAudioSource.Stop();
             run_time = run_time - 2;
             speed_Current = speed_Run;
@@ -71,6 +96,10 @@ public class Player_Move : MonoBehaviour
         }
         else
         {
+            if (Stay == false)
+            {
+                animaW();
+            }
             speed_Current = speed_Move;
             if (run_time >= 0 && run_time < run_timeP && run_gone == true)
             {
@@ -90,5 +119,56 @@ public class Player_Move : MonoBehaviour
             }
         }
         player.Move(move_Direction * speed_Current * Time.deltaTime);
+    }
+    private void animaI()
+    {
+        if (crunched == false)
+        {
+            if (Y > -1f)
+            {
+                Y = Y - 0.1f;
+            }
+            animator.SetFloat("Y", Y);
+        }
+        else if (crunched == true)
+        {
+            if (Z > 0f)
+            {
+                Z = Z - 0.1f;
+            }
+            animator.SetFloat("Z", Z);
+        }
+    }
+    private void animaW()
+    {
+        if (crunched == false)
+        {
+            if (Y > 0f)
+            {
+                Y = 0f;
+            }
+            else if (Y < 0f)
+            {
+                Y = 0f;
+            }
+            animator.SetFloat("Y", Y);
+        }
+        else if (crunched == true)
+        {
+            if (Z < 1f)
+            {
+                Z = Z + 0.1f;
+            }
+            animator.SetFloat("Z", Z);
+        }
+    }
+    private void animaR()
+    {
+        if (Y < 1f)
+        {
+            Y = Y + 0.1f;
+        }
+        animator.SetFloat("Y", Y);
+
     }
 }

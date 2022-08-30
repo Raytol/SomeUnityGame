@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class animation : MonoBehaviour
 {
+    public Transform Player;
     Animator animator;
     void Start()
     {
