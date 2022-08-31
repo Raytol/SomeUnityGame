@@ -26,7 +26,11 @@ public class Player_Move : MonoBehaviour
     public bool run_gone = false;
     public bool audioW = false;
     public int run_timeP;
-    public int run_time;s
+    public int run_time;
+    public Camera Cam;
+    public GameObject Seat;
+    public GameObject Normal;
+
 
     void Start()
     {
@@ -53,14 +57,13 @@ public class Player_Move : MonoBehaviour
             animaI();
             Stay = true;
         }
-
-
         x_Move = Input.GetAxis("Horizontal");
         z_Move = Input.GetAxis("Vertical");
         if (player.isGrounded)
         {
             move_Direction = new Vector3(x_Move, 0f, z_Move);
             move_Direction = transform.TransformDirection(move_Direction);
+
             //if (Input.GetKey(KeyCode.Space))
             //{
             //    move_Direction.y += jump;
@@ -71,12 +74,14 @@ public class Player_Move : MonoBehaviour
                 animator.SetBool("crouche", true);
                 player.height = 0.5f;
                 speed_Current = speed_Seat;
+                Cam.transform.position = Seat.transform.position;
             }
             else
             { 
                 crunched = false;
                 animator.SetBool("crouche", false);
                 player.height = 2f;
+                Cam.transform.position = Normal.transform.position;
             }
         }
         move_Direction.y -= gravity;
