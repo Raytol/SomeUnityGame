@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class TriggerEnterHouse : MonoBehaviour
 {
-    public GameObject colider;
-    public GameObject Player;
-
     private void OnTriggerEnter(Collider col)
     {
-        //f(col.name == "EnterTrigger" && Input.GetButtonDown())
-        //{
-        //    SceneManager.LoadScene(2);
-        //}
+        if(col.name == "EnterTrigger" && Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
