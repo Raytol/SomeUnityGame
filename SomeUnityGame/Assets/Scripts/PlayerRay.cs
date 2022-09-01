@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRay : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class PlayerRay : MonoBehaviour
             if(hit.collider.gameObject == Book)
             {
                 Book.SetActive(false);
+            }
+            if(hit.collider.name == "EnterCollider")
+            {
+                SceneManager.LoadScene(2);
             }
         }
     }

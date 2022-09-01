@@ -72,7 +72,7 @@ public class Player_Move : MonoBehaviour
             {
                 crunched = true;
                 animator.SetBool("crouche", true);
-                player.height = 0.5f;
+                player.height = 1f;
                 speed_Current = speed_Seat;
                 Cam.transform.position = Seat.transform.position;
             }

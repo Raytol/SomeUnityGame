@@ -7,7 +7,15 @@ public class TriggerEnterHouse : MonoBehaviour
 {
     private void OnTriggerEnter(Collider col)
     {
-        if(col.name == "EnterTrigger" && Input.GetKeyDown(KeyCode.E))
+        if(col.name == "EnterTrigger")
+        {
+            EnterDoor();
+        }
+    }
+
+    void EnterDoor()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
         {
             SceneManager.LoadScene(2);
         }
