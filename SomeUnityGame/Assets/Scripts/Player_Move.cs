@@ -113,7 +113,7 @@ public class Player_Move : MonoBehaviour
                     m_MyAudioSource.Play();
                 }
 
-                //print("3");
+                print("3");
                 run_time = run_time + 1;
                 if (run_time == run_timeP)
                 {
