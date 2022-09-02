@@ -8,7 +8,10 @@ public class PlayerRay : MonoBehaviour
     public float range = 30f;
     public GameObject Book;
     public GameObject Map;
-    
+    public GameObject MusicObj;
+    public AudioSource VIKA;
+    public GameObject Door;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -34,6 +37,14 @@ public class PlayerRay : MonoBehaviour
             if(hit.collider.gameObject == Map)
             {
                 Map.SetActive(false);
+            }
+            if(hit.collider.gameObject == MusicObj)
+            {
+                VIKA.Play();
+            }
+            if(hit.collider.gameObject == Door)
+            {
+                SceneManager.LoadScene(1);
             }
         }
     }
