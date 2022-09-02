@@ -44,7 +44,7 @@ public class test4 : MonoBehaviour
         switch (M)
         {
             case 1f:
-                print("case 1");
+                //print("case 1");
                 animator.SetFloat("x", X);
                 animator.SetFloat("y", Y);
                 animaW();
@@ -55,7 +55,7 @@ public class test4 : MonoBehaviour
                 break;
 
             case 2f:
-                print("case 2");
+                //print("case 2");
                 animator.SetFloat("x", X);
                 animator.SetFloat("y", Y);
                 animaR();
@@ -80,7 +80,7 @@ public class test4 : MonoBehaviour
                 break;
 
             case 3f:
-                print("case 3");
+                //print("case 3");
                 animator.SetFloat("y", Y);
                 animaW();
                 if (distanceToPlayer <= DetectionDistance || IsInView())
@@ -96,7 +96,7 @@ public class test4 : MonoBehaviour
                 break;
 
             case 4f:
-                print("GAME END");
+                //print("GAME END");
                 animator.SetFloat("x", X);
                 animator.SetFloat("y", Y);
                 animaS();
