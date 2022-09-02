@@ -7,6 +7,7 @@ public class PlayerRay : MonoBehaviour
 {
     public float range = 30f;
     public GameObject Book;
+    public GameObject Map;
     
     void Update()
     {
@@ -29,6 +30,10 @@ public class PlayerRay : MonoBehaviour
             if(hit.collider.name == "EnterCollider")
             {
                 SceneManager.LoadScene(2);
+            }
+            if(hit.collider.gameObject == Map)
+            {
+                Map.SetActive(false);
             }
         }
     }
