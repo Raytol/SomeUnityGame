@@ -11,6 +11,7 @@ public class PlayerRay : MonoBehaviour
     public GameObject MusicObj;
     public AudioSource VIKA;
     public GameObject Door;
+    public TriggerZone1 trigger;
 
     void Update()
     {
@@ -42,9 +43,9 @@ public class PlayerRay : MonoBehaviour
             {
                 VIKA.Play();
             }
-            if(hit.collider.gameObject == Door)
+            if (hit.collider.gameObject == Door && trigger.trigger1 == true)
             {
-                SceneManager.LoadScene(1);
+                hit.transform.GetComponent<Door>().Open();
             }
         }
     }
