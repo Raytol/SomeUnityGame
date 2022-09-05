@@ -98,10 +98,6 @@ public class test4 : MonoBehaviour
 
             case 4f:
                 //print("GAME END");
-                animator.SetFloat("x", X);
-                animator.SetFloat("y", Y);
-                animaS();
-                _navMeshAgent.SetDestination(AgentBobby.position);
                 DIe.SetActive(true);
                 break;
         }
