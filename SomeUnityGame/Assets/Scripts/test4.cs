@@ -24,6 +24,7 @@ public class test4 : MonoBehaviour
     public float DetectionDistance = 3f;
     public Transform AgentBobby;
     public Transform Player;
+    public GameObject DIe;
 
     void Start()
     {
@@ -101,6 +102,7 @@ public class test4 : MonoBehaviour
                 animator.SetFloat("y", Y);
                 animaS();
                 _navMeshAgent.SetDestination(AgentBobby.position);
+                DIe.SetActive(true);
                 break;
         }
     }
