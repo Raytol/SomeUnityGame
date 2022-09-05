@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TriggerZone1 : MonoBehaviour
 {
-    private AudioSource _audio;
     public Animator _anim;
     public GameObject TriggerZone;
     public AudioSource Door;
