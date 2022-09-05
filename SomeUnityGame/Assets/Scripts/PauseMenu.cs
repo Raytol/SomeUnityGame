@@ -31,21 +31,23 @@ public class PauseMenu : MonoBehaviour
 
         if (isMenuPaused)
         {
+            Time.timeScale = 0;
             MenuPaused.SetActive(true);
             CenterDot.SetActive(false);
             playermouse.enabled = false;
             playermove.enabled = false;
             Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 0;
+            
         }
         else
         {
+            Time.timeScale = 1;
             MenuPaused.SetActive(false);
             CenterDot.SetActive(true);
             playermouse.enabled = true;
             playermove.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1;
+            
         }
     }
 
