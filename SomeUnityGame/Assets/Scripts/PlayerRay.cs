@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerRay : MonoBehaviour
 {
@@ -12,9 +13,24 @@ public class PlayerRay : MonoBehaviour
     public AudioSource VIKA;
     public GameObject Door;
     public TriggerZone1 trigger;
+    public GameObject Bed;
+    public Text ProposedText;
 
     void Update()
     {
+        RaycastHit _hit2;
+        if (Physics.Raycast(transform.position, transform.forward, out _hit2, range))
+        {
+            if (_hit2.collider.gameObject == Bed)
+            {
+                ProposedText.text = "Сосать будешь??";
+            }
+            else
+            {
+                ProposedText.text = "";
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             Raytrue();
