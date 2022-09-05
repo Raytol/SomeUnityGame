@@ -4,26 +4,37 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-    private int scroll;
-    private bool book;
-    private bool mapa = false;
+    public GameObject wall;
+    public GameObject scrollsbk;
+
+    public static int scrolla = 0;
+
+    public static bool book = false;
+    private bool bookK = true;
+
+    public static bool mapa = false;
+    private bool mapasbk = true;
+
     void Start()
     {
 
     }
     void Update()
     {
-        if (mapa == true)
+        if (mapa == true && mapasbk == true)
+        {
+            wall.SetActive(false);
+            mapasbk = false;
+        }
+        if (scrolla == 1)
         {
 
         }
-        if (scroll == 1)
+        if (book == true && bookK == true)
         {
-
-        }
-        if (book == true)
-        {
-
+            print("1");
+            scrollsbk.SetActive(true);
+            bookK = false;
         }
     }
 

@@ -46,6 +46,7 @@ public class PlayerRay : MonoBehaviour
             Debug.Log(hit.transform.name);
             if (hit.collider.gameObject == Book)
             {
+                Win.book = true;
                 Book.SetActive(false);
             }
             else if (hit.collider.name == "EnterCollider")
@@ -54,6 +55,7 @@ public class PlayerRay : MonoBehaviour
             }
             else if (hit.collider.gameObject == Map)
             {
+                Win.mapa = true;
                 Map.SetActive(false);
             }
             else if (hit.collider.gameObject == MusicObj)
@@ -66,7 +68,7 @@ public class PlayerRay : MonoBehaviour
             }
             else if (hit.collider.gameObject == scroll)
             {
-                print('1');
+                Win.scrolla = Win.scrolla + 1;
                 scroll.SetActive(false);
             }
         }

@@ -20,23 +20,32 @@ public class screamer1 : MonoBehaviour
     }
     void Update()
     {
-        if (IsInView())
+        if (Win.mapa == false)
         {
-            if (Seeb == true)
+            if (IsInView())
             {
-                Seev = true;
+                if (Seeb == true)
+                {
+                    Seev = true;
+                }
+                See = true;
             }
-            See = true;
+            if (See == true && IsInView() == false)
+            {
+                Seeb = true;
+                Doll.SetActive(false);
+            }
+            if (Seev == true && IsInView() == false)
+            {
+                DollB.SetActive(true);
+            }
         }
-        if (See == true && IsInView() == false)
+        else
         {
-            Seeb = true;
+            DollB.SetActive(false);
             Doll.SetActive(false);
         }
-        if (Seev == true && IsInView() == false)
-        {
-            DollB.SetActive(true);
-        }
+
     }
     private bool IsInView()
     {
