@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
+    public GameObject Escape;
     public GameObject wall;
     public GameObject scrollsbk;
 
@@ -26,8 +27,10 @@ public class Win : MonoBehaviour
             wall.SetActive(false);
             mapasbk = false;
         }
-        if (scrolla == 1)
+        if (scrolla == 11)
         {
+            wall.SetActive(true);
+            Escape.SetActive(true);
 
         }
         if (book == true && bookK == true)
