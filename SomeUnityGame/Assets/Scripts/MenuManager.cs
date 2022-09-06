@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject Question;
     public GameObject LoadingScreen;
     public Slider Bar;
+    public Text ProgressText;
     public void Play()
     {
         LoadingScreen.SetActive(true);
@@ -30,6 +31,7 @@ public class MenuManager : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             Bar.value = asyncLoad.progress;
+            ProgressText.text = (asyncLoad.progress*10) + "%";
 
             if (asyncLoad.progress >= .9f && !asyncLoad.allowSceneActivation)
             {
