@@ -30,8 +30,8 @@ public class MenuManager : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
-            Bar.value = asyncLoad.progress;
-            ProgressText.text = (asyncLoad.progress*10) + "%";
+            Bar.value = asyncLoad.progress+10;
+            ProgressText.text = (asyncLoad.progress*1000/1000*100+10) + "%";
 
             if (asyncLoad.progress >= .9f && !asyncLoad.allowSceneActivation)
             {

@@ -17,6 +17,17 @@ public class PlayerRay : MonoBehaviour
     public GameObject scrolls9;
     public GameObject scrolls10;
 
+    public GameObject kscrolls1;
+    public GameObject kscrolls2;
+    public GameObject kscrolls3;
+    public GameObject kscrolls4;
+    public GameObject kscrolls5;
+    public GameObject kscrolls6;
+    public GameObject kscrolls7;
+    public GameObject kscrolls8;
+    public GameObject kscrolls9;
+    public GameObject kscrolls10;
+
     public GameObject scrolls;
     public float range = 30f;
     public GameObject scroll;
@@ -88,51 +99,61 @@ public class PlayerRay : MonoBehaviour
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls1.SetActive(false);
+                kscrolls1.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls2)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls2.SetActive(false);
+                kscrolls2.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls3)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls3.SetActive(false);
+                kscrolls3.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls4)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls4.SetActive(false);
+                kscrolls4.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls5)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls5.SetActive(false);
+                kscrolls5.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls6)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls6.SetActive(false);
+                kscrolls6.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls7)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls7.SetActive(false);
+                kscrolls7.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls8)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls8.SetActive(false);
+                kscrolls8.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls9)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls9.SetActive(false);
+                kscrolls9.SetActive(true);
             }
             else if (hit.collider.gameObject == scrolls10)
             {
                 Win.scrolla = Win.scrolla + 1;
                 scrolls10.SetActive(false);
+                kscrolls10.SetActive(true);
             }
         }
     }
