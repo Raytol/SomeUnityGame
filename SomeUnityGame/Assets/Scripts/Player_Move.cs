@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+    public GameObject runa;
+    public GameObject movea;
+
     public Animator animator;
     public float Y = -1f;
     public float Z = 0f;
@@ -34,6 +37,7 @@ public class Player_Move : MonoBehaviour
 
     void Start()
     {
+
         animator = GetComponent<Animator>();
         m_MyAudioSource = GetComponent<AudioSource>();
         run_time = run_timeP;
@@ -64,10 +68,10 @@ public class Player_Move : MonoBehaviour
             move_Direction = new Vector3(x_Move, 0f, z_Move);
             move_Direction = transform.TransformDirection(move_Direction);
 
-            //if (Input.GetKey(KeyCode.Space))
-            //{
-            //    move_Direction.y += jump;
-            //}
+            if (Input.GetKey(KeyCode.Space))
+            {
+                move_Direction.y += jump;
+            }
             if (Input.GetKey(KeyCode.LeftControl))
             {
                 crunched = true;
@@ -87,6 +91,8 @@ public class Player_Move : MonoBehaviour
         move_Direction.y -= gravity;
         if (run_gone == false && crunched == false && Input.GetKey(KeyCode.LeftShift) && run_time <= run_timeP && run_time > 0)
         {
+            runa.SetActive(true);
+            movea.SetActive(false);
             animaR();
             m_MyAudioSource.Stop();
             run_time = run_time - 2;
@@ -102,7 +108,14 @@ public class Player_Move : MonoBehaviour
         {
             if (Stay == false)
             {
+                runa.SetActive(false);
+                movea.SetActive(true);
                 animaW();
+            }
+            else
+            {
+                runa.SetActive(false);
+                movea.SetActive(false);
             }
             speed_Current = speed_Move;
             if (run_time >= 0 && run_time < run_timeP && run_gone == true)

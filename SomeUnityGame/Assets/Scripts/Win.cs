@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
+    public GameObject bar;
     public GameObject Escape;
     public GameObject wall;
     public GameObject scrollsbk;
@@ -35,7 +36,7 @@ public class Win : MonoBehaviour
         }
         if (book == true && bookK == true)
         {
-            print("1");
+            bar.SetActive(false);
             scrollsbk.SetActive(true);
             bookK = false;
         }
