@@ -36,11 +36,16 @@ public class PlayerRay : MonoBehaviour
     public GameObject Book;
     public GameObject Map;
     public GameObject MusicObj;
-    public AudioSource VIKA;
+    private AudioSource VIKA;
     public GameObject Door;
     public TriggerZone1 trigger;
     public GameObject Bed;
     public AudioSource DoorSound;
+    private bool IsAudioPlay = false;
+    public GameObject Scream1;
+    public GameObject Dead;
+    public GameObject Prefab;
+    public Animator _anim1;
     //public Text ProposedText;
 
     void Update()
@@ -90,7 +95,21 @@ public class PlayerRay : MonoBehaviour
             }
             else if (hit.collider.gameObject == MusicObj)
             {
-                VIKA.Play();
+                IsAudioPlay = !IsAudioPlay;
+                VIKA = MusicObj.GetComponent<AudioSource>();
+                if (IsAudioPlay)
+                {
+                    VIKA.Play();
+                }
+                else
+                {
+                    VIKA.Stop();
+                }
+            }
+            else if(hit.collider.gameObject == Scream1)
+            {
+                Vector3 spawnPos = transform.position + new Vector3(5, 0, 5);
+                Instantiate(Prefab, spawnPos, Quaternion.identity);
             }
             else if (hit.collider.gameObject == Door && trigger.trigger1 == true)
             {

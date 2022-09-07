@@ -7,6 +7,7 @@ public class TriggerZone1 : MonoBehaviour
     public Animator _anim;
     public GameObject TriggerZone;
     public AudioSource Door;
+    public GameObject ANTIboy;
     public bool trigger1 = true;
 
     private void OnTriggerEnter(Collider TriggerZone1)
@@ -14,6 +15,7 @@ public class TriggerZone1 : MonoBehaviour
         Door.Play();
         _anim.SetBool("IsOpened", false);
         trigger1 = false;
+        Destroy(ANTIboy);
         Destroy(TriggerZone);
     }
 }
