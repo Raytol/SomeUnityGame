@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class DIEscreen : MonoBehaviour
 {
+    public GameObject puppet;
+    public GameObject sound;
+
     float elapsedTime = 0.0f;
     public GameObject diescreen;
     public Text ScrollsCountText;
@@ -19,6 +22,8 @@ public class DIEscreen : MonoBehaviour
 
     void Update()
     {
+        puppet.SetActive(false);
+        sound.SetActive(false); 
         elapsedTime += Time.deltaTime;
         if (elapsedTime > 3.0f)
         {

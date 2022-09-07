@@ -10985,7 +10985,7 @@ GameObject:
   - component: {fileID: 163509502}
   - component: {fileID: 163509504}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: main musick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24979,6 +24979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17306883d6e257849a6c7aa2a1bc9871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puppet: {fileID: 919132147626907399}
+  sound: {fileID: 163509501}
   diescreen: {fileID: 1594853184}
   ScrollsCountText: {fileID: 169639553}
   TimeDieText: {fileID: 1304305053}
@@ -64251,7 +64253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835433403}
   m_LocalRotation: {x: -0, y: -0.7569983, z: -0, w: 0.6534168}
-  m_LocalPosition: {x: 839.01, y: 413.03, z: 333.91}
+  m_LocalPosition: {x: 839.01, y: 410.56, z: 333.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -77997,7 +77999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147626907399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 442.07104, y: 399.371, z: 546.3425}
+  m_LocalPosition: {x: 442.07104, y: 399.371, z: 622.4}
   m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_ConstrainProportionsScale: 1
   m_Children:
