@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerRay : MonoBehaviour
 {
+    public GameObject call;
     public GameObject scrolls1;
     public GameObject scrolls2;
     public GameObject scrolls3;
@@ -77,6 +78,7 @@ public class PlayerRay : MonoBehaviour
             Debug.Log(hit.transform.name);
             if (hit.collider.gameObject == Book)
             {
+                call.SetActive(true);
                 paper.sound = true;
                 Win.book = true;
                 Book.SetActive(false);
