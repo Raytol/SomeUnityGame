@@ -40,22 +40,23 @@ public class PlayerRay : MonoBehaviour
     public GameObject Door;
     public TriggerZone1 trigger;
     public GameObject Bed;
-    public Text ProposedText;
+    public AudioSource DoorSound;
+    //public Text ProposedText;
 
     void Update()
     {
-        RaycastHit _hit2;
-        if (Physics.Raycast(transform.position, transform.forward, out _hit2, range))
-        {
-            if (_hit2.collider.gameObject == Bed)
-            {
-                ProposedText.text = "Сосать будешь??";
-            }
-            else
-            {
-                ProposedText.text = "";
-            }
-        }
+        //RaycastHit _hit2;
+        //if (Physics.Raycast(transform.position, transform.forward, out _hit2, range))
+        //{
+        //    if (_hit2.collider.gameObject == Bed)
+        //   {
+        //        ProposedText.text = "Сосать будешь??";
+        //    }
+        //    else
+        //    {
+        //        ProposedText.text = "";
+        //    }
+        //}
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -84,6 +85,8 @@ public class PlayerRay : MonoBehaviour
                 paper.sound = true;
                 Win.mapa = true;
                 Map.SetActive(false);
+                trigger.trigger1 = true;
+                DoorSound.Play();
             }
             else if (hit.collider.gameObject == MusicObj)
             {
