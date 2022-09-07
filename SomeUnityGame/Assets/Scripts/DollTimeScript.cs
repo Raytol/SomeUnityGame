@@ -22,7 +22,7 @@ public class DollTimeScript : MonoBehaviour
             Times = 0;
         }
 
-        if (Sec == 5)
+        if (Sec == 10)
         {
             Sec = 0;
             Rand();
