@@ -28,7 +28,7 @@ public class TimeManager : MonoBehaviour
         {
             second1 += 1;
             second2 = 0;
-            if (second1 == 60)
+            if (second1 == 6)
             {
                 second1 = 0;
                 minute2 += 1;

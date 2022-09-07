@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DIEscreen : MonoBehaviour
 {
     float elapsedTime = 0.0f;
     public GameObject diescreen;
+    public Text ScrollsCountText;
+    public Text TimeDieText;
     void Start()
     {
+        ScrollsCountText.text = Win.scrolla.ToString() + "/10";
+        TimeDieText.text = TimeManager.myText.text;
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
         elapsedTime += Time.deltaTime;
@@ -18,5 +24,10 @@ public class DIEscreen : MonoBehaviour
         {
             diescreen.SetActive(true);
         }
+    }
+
+    public void ReturnIntoMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
