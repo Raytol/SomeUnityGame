@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
+    float elapsedTime = 0.0f;
+    public GameObject texte;
     public GameObject scrollend;
     public GameObject puppet;
     public GameObject puppet1;
@@ -37,6 +39,15 @@ public class Win : MonoBehaviour
         }
         if (scrolla == 11)
         {
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime > 6.0f)
+            {
+                texte.SetActive(false);
+            }
+            else
+            {
+                texte.SetActive(true);
+            }
             wall.SetActive(false);
             Escape.SetActive(true);
 
