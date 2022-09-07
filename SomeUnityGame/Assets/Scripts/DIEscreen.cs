@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DIEscreen : MonoBehaviour
 {
+    public GameObject sounddie;
     public GameObject puppet;
     public GameObject sound;
 
@@ -28,6 +29,7 @@ public class DIEscreen : MonoBehaviour
         if (elapsedTime > 3.0f)
         {
             diescreen.SetActive(true);
+            sounddie.SetActive(true);
         }
     }
 

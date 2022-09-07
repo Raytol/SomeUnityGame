@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
+    public GameObject scrollend;
+    public GameObject puppet;
+    public GameObject puppet1;
+    public GameObject puppet2;
+    public GameObject puppet3;
+    public GameObject puppet4;
+
     public GameObject bar;
     public GameObject Escape;
     public GameObject wall;
@@ -30,7 +37,7 @@ public class Win : MonoBehaviour
         }
         if (scrolla == 11)
         {
-            wall.SetActive(true);
+            wall.SetActive(false);
             Escape.SetActive(true);
 
         }
@@ -39,6 +46,27 @@ public class Win : MonoBehaviour
             bar.SetActive(false);
             scrollsbk.SetActive(true);
             bookK = false;
+        }
+        if (scrolla == 1)
+        {
+            puppet.SetActive(true);
+        }
+        if (scrolla == 3)
+        {
+            puppet1.SetActive(true);
+        }
+        if (scrolla == 6)
+        {
+            puppet2.SetActive(true);
+        }
+        if (scrolla == 8)
+        {
+            puppet3.SetActive(true);
+        }
+        if (scrolla == 10)
+        {
+            scrollend.SetActive(true);
+            puppet4.SetActive(true);
         }
     }
 
