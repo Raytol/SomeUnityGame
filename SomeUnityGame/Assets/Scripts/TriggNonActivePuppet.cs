@@ -6,15 +6,31 @@ public class TriggNonActivePuppet : MonoBehaviour
 {
     public GameObject NonActivePuppet;
     private Transform PuppetTransform;
-    public int rotationSpeed = 30;
+    public int rotationSpeed = 45;
     public Transform Player;
 
     private void OnTriggerEnter(Collider PassiveCol)
     {
         PuppetTransform = NonActivePuppet.GetComponent<Transform>();
         NonActivePuppet.SetActive(true);
-        RotateToTarget();
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        NonActivePuppet.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (NonActivePuppet.activeSelf)
+        {
+            RotateToTarget();
+            RaycastHit hit;
+            if (Physics.Raycast(PuppetTransform.transform.position, Player.position - PuppetTransform.position, out hit, 15))
+            {
+                NonActivePuppet.SetActive(false);
+            }
+        }
     }
 
     private void RotateToTarget()
