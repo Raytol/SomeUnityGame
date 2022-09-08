@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class video : MonoBehaviour
 {
+    private float kek = 0;
+    public GameObject names;
     float elapsedTime = 0.0f;
     public GameObject videos;
     public GameObject player;
@@ -16,8 +18,10 @@ public class video : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        if (elapsedTime > 11.0f)
+        if (elapsedTime > 13.0f)
         {
+           // names.SetActive(true); 
+            kek = kek + 0.05f;
             player.SetActive(true);
             videos.SetActive(false);
         }
