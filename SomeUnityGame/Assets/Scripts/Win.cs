@@ -40,7 +40,7 @@ public class Win : MonoBehaviour
         if (scrolla == 11)
         {
             elapsedTime += Time.deltaTime;
-            if (elapsedTime > 6.0f)
+            if (elapsedTime > 4.0f)
             {
                 texte.SetActive(false);
             }
