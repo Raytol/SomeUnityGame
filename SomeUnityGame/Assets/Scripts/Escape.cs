@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Escape : MonoBehaviour
 {
+    public GameObject monster;
     public GameObject player;
     private void OnTriggerEnter(Collider player)
     {
-        SceneManager.LoadScene(0);
+        monster.SetActive(true);
     }
 }
