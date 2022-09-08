@@ -16,7 +16,7 @@ public class DIEscreen : MonoBehaviour
     public Text TimeDieText;
     void Start()
     {
-        ScrollsCountText.text = Win.scrolla.ToString() + "/10";
+        ScrollsCountText.text = Win.scrolla.ToString() + "/11";
         TimeDieText.text = TimeManager.myText.text;
         
     }
