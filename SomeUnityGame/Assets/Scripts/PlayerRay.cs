@@ -47,6 +47,10 @@ public class PlayerRay : MonoBehaviour
     public GameObject Dead;
     public GameObject Prefab;
     public Animator _anim1;
+    public GameObject NearPhone;
+    public GameObject TriggerSoundCollider;
+    public AudioSource RealPhoneSound1;
+    private bool trigger2 = false;
     //public Text ProposedText;
 
     void Update()
@@ -113,7 +117,7 @@ public class PlayerRay : MonoBehaviour
                 Vector3 spawnPos = transform.position + new Vector3(5, 0, 5);
                 Instantiate(Prefab, spawnPos, Quaternion.identity);
             }
-            else if (hit.collider.gameObject == Door && trigger.trigger1 == true)
+            else if (hit.collider.gameObject == Door && trigger.trigger1 == true && trigger2)
             {
                 hit.transform.GetComponent<Door>().Open();
             }
@@ -203,6 +207,12 @@ public class PlayerRay : MonoBehaviour
                 scrolls10.SetActive(false);
                 kscrolls10.SetActive(true);
                 ScrollSound.Play();
+            }
+            else if(hit.collider.gameObject == NearPhone)
+            {
+                trigger2 = true;
+                Destroy(TriggerSoundCollider);
+                RealPhoneSound1.Play();
             }
         }
     }
