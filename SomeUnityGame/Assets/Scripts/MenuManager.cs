@@ -10,6 +10,8 @@ public class MenuManager : MonoBehaviour
     public GameObject LoadingScreen;
     public Slider Bar;
     public Text ProgressText;
+    public GameObject Controls;
+    public bool ControlsIsActive = false;
     public void Play()
     {
         LoadingScreen.SetActive(true);
@@ -43,6 +45,19 @@ public class MenuManager : MonoBehaviour
             }
 
             yield return null;
+        }
+    }
+
+    public void ControlsActive()
+    {
+        ControlsIsActive = !ControlsIsActive;
+        if (ControlsIsActive)
+        {
+            Controls.SetActive(true);
+        }
+        else
+        {
+            Controls.SetActive(false);
         }
     }
 }
