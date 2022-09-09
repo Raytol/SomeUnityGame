@@ -156,7 +156,7 @@ public class test4 : MonoBehaviour
         }
         else if (Y >= 1f)
         {
-            _navMeshAgent.speed = 100f;
+            _navMeshAgent.speed = 10f;
             Y = Y - 0.01f;
         }
         if (_navMeshAgent.speed <= 10f)
@@ -172,12 +172,12 @@ public class test4 : MonoBehaviour
     {
         if (Y <= 0)
         {
-            _navMeshAgent.speed = 100f;
+            _navMeshAgent.speed = 10f;
             Y = Y + 0.01f;
         }
         else if (Y >= 0f)
         {
-            _navMeshAgent.speed = 100f;
+            _navMeshAgent.speed = 10f;
             Y = Y - 0.01f;
         }
         if (_navMeshAgent.speed <= 3.5f)
@@ -193,7 +193,7 @@ public class test4 : MonoBehaviour
     {
         if (Y >= -1)
         {
-            _navMeshAgent.speed = 100f;
+            _navMeshAgent.speed = 10f;
             Y = Y - 0.03f;
         }
         if (_navMeshAgent.speed <= 0f)

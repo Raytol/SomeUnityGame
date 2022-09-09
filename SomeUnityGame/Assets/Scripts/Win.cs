@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
+    public GameObject mus;
     float elapsedTime = 0.0f;
     public GameObject texte;
     public GameObject scrollend;
@@ -15,7 +16,7 @@ public class Win : MonoBehaviour
     public GameObject puppet5;
     public GameObject puppet6;
     public GameObject puppet7;
-
+    public GameObject puppet8;
 
     public GameObject bar;
     public GameObject Escape;
@@ -43,6 +44,7 @@ public class Win : MonoBehaviour
         }
         if (scrolla == 11)
         {
+            puppet8.SetActive(true);
             elapsedTime += Time.deltaTime;
             if (elapsedTime > 4.0f)
             {
@@ -85,6 +87,7 @@ public class Win : MonoBehaviour
         }
         if (scrolla == 10)
         {
+            mus.SetActive(false);
             scrollend.SetActive(true);
             puppet4.SetActive(true);
             puppet7.SetActive(true);
