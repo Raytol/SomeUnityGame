@@ -18,9 +18,6 @@ public class credits : MonoBehaviour
     }
     void Update()
     {
-        ax.SetActive(false);
-        b.SetActive(false);
-        c.SetActive(false);
         if (a < aa)
         {
             credit.transform.Translate(0, y, 0);
@@ -33,5 +30,8 @@ public class credits : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
         }
+        ax.SetActive(false);
+        b.SetActive(false);
+        c.SetActive(false);
     }
 }
