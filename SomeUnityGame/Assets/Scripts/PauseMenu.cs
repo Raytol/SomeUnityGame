@@ -36,6 +36,7 @@ public class PauseMenu : MonoBehaviour
             CenterDot.SetActive(false);
             playermouse.enabled = false;
             playermove.enabled = false;
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             
         }
@@ -46,7 +47,7 @@ public class PauseMenu : MonoBehaviour
             CenterDot.SetActive(true);
             playermouse.enabled = true;
             playermove.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             
         }
     }

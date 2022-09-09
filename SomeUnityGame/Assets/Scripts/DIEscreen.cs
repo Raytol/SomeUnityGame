@@ -18,8 +18,6 @@ public class DIEscreen : MonoBehaviour
     {
         ScrollsCountText.text = Win.scrolla.ToString() + "/11";
         TimeDieText.text = TimeManager.myText.text;
-        Cursor.lockState = CursorLockMode.None;
-
     }
 
     void Update()
