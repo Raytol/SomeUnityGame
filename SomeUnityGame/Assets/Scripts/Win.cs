@@ -12,6 +12,10 @@ public class Win : MonoBehaviour
     public GameObject puppet2;
     public GameObject puppet3;
     public GameObject puppet4;
+    public GameObject puppet5;
+    public GameObject puppet6;
+    public GameObject puppet7;
+
 
     public GameObject bar;
     public GameObject Escape;
@@ -61,8 +65,13 @@ public class Win : MonoBehaviour
         if (scrolla == 1)
         {
             puppet.SetActive(true);
+            puppet5.SetActive(true);
         }
-        if (scrolla == 3)
+        if (scrolla == 2)
+        {
+            puppet6.SetActive(true);
+        }
+        if (scrolla == 4)
         {
             puppet1.SetActive(true);
         }
@@ -78,6 +87,7 @@ public class Win : MonoBehaviour
         {
             scrollend.SetActive(true);
             puppet4.SetActive(true);
+            puppet7.SetActive(true);
         }
     }
 
