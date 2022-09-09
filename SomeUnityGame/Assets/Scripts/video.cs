@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class video : MonoBehaviour
 {
+    public GameObject cam;
     private bool kak =true;
     private float kek = 0;
     public GameObject names;
@@ -19,28 +20,32 @@ public class video : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        if (elapsedTime > 13.0f)
+        if (elapsedTime > 22.0f)
         {
-            if (kak == true)
-            {
-                names.SetActive(true);
-            }
-            if (elapsedTime > 16.0f)
-            {
-                videotwo.a = 2;
-            }
-            else
-            {
-                videotwo.a = 1;
-            }
-            kek = kek + 0.05f;
-            player.SetActive(true);
-            videos.SetActive(false);
-        }
-        else if (elapsedTime > 19.0f)
-        {
-            kak = false;
             names.SetActive(false);
+            cam.SetActive(false);
+            kak = false;
+        }
+        else
+        {
+            if (elapsedTime > 13.0f)
+            {
+                if (kak == true)
+                {
+                    names.SetActive(true);
+                }
+                if (elapsedTime > 16.0f)
+                {
+                    videotwo.a = 2;
+                }
+                else
+                {
+                    videotwo.a = 1;
+                }
+                kek = kek + 0.05f;
+                player.SetActive(true);
+                videos.SetActive(false);
+            }
         }
     }
 }
