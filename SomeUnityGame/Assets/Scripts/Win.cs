@@ -15,7 +15,7 @@ public class Win : MonoBehaviour
     public GameObject puppet5;
     public GameObject puppet6;
     public GameObject puppet7;
-
+    public GameObject puppet8;
 
     public GameObject bar;
     public GameObject Escape;
@@ -43,6 +43,7 @@ public class Win : MonoBehaviour
         }
         if (scrolla == 11)
         {
+            puppet8.SetActive(true);
             elapsedTime += Time.deltaTime;
             if (elapsedTime > 4.0f)
             {
