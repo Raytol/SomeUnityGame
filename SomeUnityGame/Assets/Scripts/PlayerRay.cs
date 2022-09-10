@@ -61,7 +61,7 @@ public class PlayerRay : MonoBehaviour
         scrolls7.SetActive(true);
         scrolls8.SetActive(true);
         scrolls9.SetActive(true);
-        scrolls10.SetActive(false);
+        scrolls10.SetActive(true);
         kscrolls1.SetActive(false);
         kscrolls2.SetActive(false);
         kscrolls3.SetActive(false);
@@ -73,7 +73,7 @@ public class PlayerRay : MonoBehaviour
         kscrolls9.SetActive(false);
         kscrolls10.SetActive(false);
         scrolls.SetActive(false);
-        scroll.SetActive(false);
+        scroll.SetActive(true);
         Book.SetActive(true);
         Map.SetActive(true);
     }

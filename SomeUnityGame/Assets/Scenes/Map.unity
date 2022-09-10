@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.3
     agentHeight: 1.8
-    agentSlope: 55.9
+    agentSlope: 60
     agentClimb: 0.5
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -19990,8 +19990,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 227679246}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -20013,7 +20013,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -20992,8 +20992,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 252088591}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -21015,7 +21015,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -29212,7 +29212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &405938299
 Transform:
   m_ObjectHideFlags: 0
@@ -29663,7 +29663,7 @@ VideoPlayer:
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
+  m_SkipOnDrop: 0
   m_Looping: 0
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
@@ -29779,8 +29779,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 430681084}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -29802,7 +29802,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -37326,8 +37326,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 786103677}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -37349,7 +37349,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -45924,8 +45924,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 949879680}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -45947,7 +45947,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -46447,8 +46447,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 965892942}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -46470,7 +46470,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -47921,7 +47921,7 @@ MonoBehaviour:
   puppet2: {fileID: 965892937}
   puppet3: {fileID: 1638074016}
   puppet4: {fileID: 949879675}
-  puppet5: {fileID: 252088586}
+  puppet5: {fileID: 227679241}
   puppet6: {fileID: 1080638141}
   puppet7: {fileID: 252088586}
   puppet8: {fileID: 786103672}
@@ -48802,8 +48802,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 1080638146}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -48825,7 +48825,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -72490,7 +72490,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 919132147626907399}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -72499,7 +72499,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -72518,8 +72518,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 543450651879919037}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -85264,8 +85264,8 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 40
-  DetectionDistance: 5
+  ViewDistance: 50
+  DetectionDistance: 50
   AgentBobby: {fileID: 1638074021}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -85287,7 +85287,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -94842,8 +94842,8 @@ MonoBehaviour:
   Y: -1
   Z: 0
   Stay: 0
-  speed_Move: 7
-  speed_Run: 14
+  speed_Move: 6
+  speed_Run: 10
   speed_Seat: 0
   speed_Current: 0
   jump: 1

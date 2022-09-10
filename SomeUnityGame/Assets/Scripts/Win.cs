@@ -35,9 +35,11 @@ public class Win : MonoBehaviour
 
     public static bool mapa = false;
     private bool mapasbk = true;
+    private int scrollas;
 
     void Start()
     {
+        scrollas = scrolla;
         mapa = false;
         scrolla = 0;
         wall.SetActive(true);
@@ -63,6 +65,8 @@ public class Win : MonoBehaviour
     }
     void Update()
     {
+        scrollas = scrolla;
+        print(scrollas);
         if (mapa == true && mapasbk == true)
         {
             wall.SetActive(false);
