@@ -15,12 +15,12 @@ public class Player_Mouse_Move : MonoBehaviour
     float currentVelocityX;
     float currentVelocityY;
 
-    void Update()
-    {
-        MouseMove();
-    }
+   // void Update()
+    //{
+    //    MouseMove();
+    //}
 
-    void MouseMove()
+    private void LateUpdate()
     {
         xRot += Input.GetAxis("Mouse X") * sensivity;
         yRot += Input.GetAxis("Mouse Y") * sensivity;

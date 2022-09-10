@@ -47,7 +47,9 @@ public class PlayerRay : MonoBehaviour
     public GameObject NearPhone;
     public GameObject TriggerSoundCollider;
     public AudioSource RealPhoneSound1;
+    public AudioSource GoodKi;
     private bool trigger2 = false;
+    private bool IsPhoneActive = false;
     //public Text ProposedText;
 
     private void Start()
@@ -235,9 +237,18 @@ public class PlayerRay : MonoBehaviour
             }
             else if(hit.collider.gameObject == NearPhone)
             {
-                trigger2 = true;
-                Destroy(TriggerSoundCollider);
-                RealPhoneSound1.Play();
+                IsPhoneActive = !IsPhoneActive;
+                if (IsPhoneActive)
+                {
+                    trigger2 = true;
+                    Destroy(TriggerSoundCollider);
+                    RealPhoneSound1.Play();
+                    GoodKi.Play();
+                }
+                else
+                {
+                    RealPhoneSound1.Stop();
+                }
             }
         }
     }
