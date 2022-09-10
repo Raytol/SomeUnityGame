@@ -5,7 +5,7 @@ using UnityEngine;
 public class video : MonoBehaviour
 {
     public GameObject cam;
-    private bool kak =true;
+    private bool kak = true;
     private float kek = 0;
     public GameObject names;
     float elapsedTime = 0.0f;
@@ -13,7 +13,9 @@ public class video : MonoBehaviour
     public GameObject player;
     void Start()
     {
-        
+        names.SetActive(false);
+        kak = true;
+        cam.SetActive(true);
     }
 
     // Update is called once per frame
@@ -23,8 +25,10 @@ public class video : MonoBehaviour
         if (elapsedTime > 22.0f)
         {
             names.SetActive(false);
-            cam.SetActive(false);
+            cam.SetActive(true);
             kak = false;
+            player.SetActive(false);
+            videos.SetActive(true);
         }
         else
         {

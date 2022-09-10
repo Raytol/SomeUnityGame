@@ -18,6 +18,8 @@ public class DIEscreen : MonoBehaviour
     {
         ScrollsCountText.text = Win.scrolla.ToString() + "/11";
         TimeDieText.text = TimeManager.myText.text;
+        diescreen.SetActive(false);
+        sounddie.SetActive(false);
     }
 
     void Update()
@@ -29,6 +31,7 @@ public class DIEscreen : MonoBehaviour
         {
             diescreen.SetActive(true);
             sounddie.SetActive(true);
+            Cursor.visible = true;
         }
     }
 

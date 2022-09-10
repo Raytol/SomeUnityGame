@@ -10,11 +10,7 @@ public class endcreamer : MonoBehaviour
     private int a = 0;
     private float y = 0.1f;
     public Transform Body;
-    
-    void Start()
-    {
 
-    }
     void Update()
     {
         if (a < aa)

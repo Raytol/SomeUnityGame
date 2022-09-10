@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerRay : MonoBehaviour
 {
-    public GameObject call;
     public GameObject scrolls1;
     public GameObject scrolls2;
     public GameObject scrolls3;
@@ -44,14 +43,40 @@ public class PlayerRay : MonoBehaviour
     public AudioSource DoorSound;
     private bool IsAudioPlay = false;
     public GameObject Scream1;
-    public GameObject Dead;
     public GameObject Prefab;
-    public Animator _anim1;
     public GameObject NearPhone;
     public GameObject TriggerSoundCollider;
     public AudioSource RealPhoneSound1;
     private bool trigger2 = false;
     //public Text ProposedText;
+
+    private void Start()
+    {
+        scrolls1.SetActive(true);
+        scrolls2.SetActive(true);
+        scrolls3.SetActive(true);
+        scrolls4.SetActive(true);
+        scrolls5.SetActive(true);
+        scrolls6.SetActive(true);
+        scrolls7.SetActive(true);
+        scrolls8.SetActive(true);
+        scrolls9.SetActive(true);
+        scrolls10.SetActive(false);
+        kscrolls1.SetActive(false);
+        kscrolls2.SetActive(false);
+        kscrolls3.SetActive(false);
+        kscrolls4.SetActive(false);
+        kscrolls5.SetActive(false);
+        kscrolls6.SetActive(false);
+        kscrolls7.SetActive(false);
+        kscrolls8.SetActive(false);
+        kscrolls9.SetActive(false);
+        kscrolls10.SetActive(false);
+        scrolls.SetActive(false);
+        scroll.SetActive(false);
+        Book.SetActive(true);
+        Map.SetActive(true);
+    }
 
     void Update()
     {
@@ -82,7 +107,6 @@ public class PlayerRay : MonoBehaviour
             Debug.Log(hit.transform.name);
             if (hit.collider.gameObject == Book)
             {
-                call.SetActive(true);
                 paper.sound = true;
                 Win.book = true;
                 Book.SetActive(false);
@@ -115,6 +139,7 @@ public class PlayerRay : MonoBehaviour
             else if(hit.collider.gameObject == Scream1)
             {
                 Vector3 spawnPos = transform.position + new Vector3(5, 0, 5);
+                Prefab.SetActive(true);
                 Instantiate(Prefab, spawnPos, Quaternion.identity);
             }
             else if (hit.collider.gameObject == Door && trigger.trigger1 == true && trigger2)

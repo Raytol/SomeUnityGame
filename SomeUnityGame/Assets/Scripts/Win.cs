@@ -23,6 +23,11 @@ public class Win : MonoBehaviour
     public GameObject wall;
     public GameObject scrollsbk;
 
+    public GameObject Poselenec;
+
+    public GameObject Minecraft;
+    public GameObject GameDisign;
+
     public static int scrolla = 0;
 
     public static bool book = false;
@@ -33,7 +38,27 @@ public class Win : MonoBehaviour
 
     void Start()
     {
-
+        puppet.SetActive(false);
+        puppet1.SetActive(false);
+        puppet2.SetActive(false);
+        puppet3.SetActive(false);
+        puppet4.SetActive(false);
+        puppet5.SetActive(false);
+        puppet6.SetActive(false);
+        puppet7.SetActive(false);
+        puppet8.SetActive(false);
+        scrolla = 0;
+        wall.SetActive(true);
+        texte.SetActive(false);
+        //.!.
+        mus.SetActive(true);
+        Escape.SetActive(false);
+        scrollend.SetActive(false);
+        bar.SetActive(true);
+        scrollsbk.SetActive(false);
+        Poselenec.SetActive(false);
+        Minecraft.SetActive(false);
+        GameDisign.SetActive(true);
     }
     void Update()
     {

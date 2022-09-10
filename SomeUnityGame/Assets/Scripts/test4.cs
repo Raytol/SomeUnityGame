@@ -36,6 +36,7 @@ public class test4 : MonoBehaviour
         agentTransform = _navMeshAgent.transform;
         InvokeRepeating(nameof(AImove), changePosTime, changePosTime);
         M = 1f;
+        DIe.SetActive(false);
     }
     void Update()
     {
