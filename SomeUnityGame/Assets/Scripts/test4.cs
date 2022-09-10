@@ -156,44 +156,44 @@ public class test4 : MonoBehaviour
         }
         else if (Y >= 1f)
         {
-            _navMeshAgent.speed = 10f;
+            _navMeshAgent.speed = 11f;
             Y = Y - 0.01f;
         }
-        if (_navMeshAgent.speed <= 10f)
+        if (_navMeshAgent.speed <= 11f)
         {
-            _navMeshAgent.speed = 10f;
+            _navMeshAgent.speed = 11f;
         }
-        else if (_navMeshAgent.speed >= 10f)
+        else if (_navMeshAgent.speed >= 11f)
         {
-            _navMeshAgent.speed = 10f;
+            _navMeshAgent.speed = 11f;
         }
     }
     public void animaW()
     {
         if (Y <= 0)
         {
-            _navMeshAgent.speed = 10f;
+            _navMeshAgent.speed = 11f;
             Y = Y + 0.01f;
         }
         else if (Y >= 0f)
         {
-            _navMeshAgent.speed = 10f;
+            _navMeshAgent.speed = 11f;
             Y = Y - 0.01f;
         }
-        if (_navMeshAgent.speed <= 3.5f)
+        if (_navMeshAgent.speed <= 5.5f)
         {
-            _navMeshAgent.speed = 3.5f;
+            _navMeshAgent.speed = 5.5f;
         }
-        else if (_navMeshAgent.speed >= 3.5f)
+        else if (_navMeshAgent.speed >=5.5f)
         {
-            _navMeshAgent.speed = 10f;
+            _navMeshAgent.speed = 11f;
         }
     }
     public void animaS()
     {
         if (Y >= -1)
         {
-            _navMeshAgent.speed = 10f;
+            _navMeshAgent.speed = 11f;
             Y = Y - 0.03f;
         }
         if (_navMeshAgent.speed <= 0f)
@@ -202,7 +202,7 @@ public class test4 : MonoBehaviour
         }
         else if (_navMeshAgent.speed >= 0f)
         {
-            _navMeshAgent.speed = 7f;
+            _navMeshAgent.speed = 11f;
         }
     }
 }
