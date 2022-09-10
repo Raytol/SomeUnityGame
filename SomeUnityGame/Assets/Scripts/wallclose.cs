@@ -6,16 +6,20 @@ public class wallclose : MonoBehaviour
 {
     public GameObject player;
     public GameObject wall;
-    public GameObject script;
+    private bool a = true;
     void Start()
     {
-        
+        wall.SetActive(true);
+        a = true;
     }
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider player)
     {
-        wall.SetActive(true);
-        Destroy(script);
+        if (a == true)
+        {
+            wall.SetActive(true); 
+            a = false;
+        }
     }
 }

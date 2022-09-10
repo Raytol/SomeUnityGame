@@ -16,6 +16,7 @@ public class video : MonoBehaviour
         names.SetActive(false);
         kak = true;
         cam.SetActive(true);
+        player.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,10 +26,9 @@ public class video : MonoBehaviour
         if (elapsedTime > 22.0f)
         {
             names.SetActive(false);
-            cam.SetActive(true);
+            cam.SetActive(false);
             kak = false;
-            player.SetActive(false);
-            videos.SetActive(true);
+            videos.SetActive(false);
         }
         else
         {
