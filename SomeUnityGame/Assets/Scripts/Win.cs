@@ -38,6 +38,9 @@ public class Win : MonoBehaviour
 
     void Start()
     {
+        mapa = false;
+        scrolla = 0;
+        wall.SetActive(true);
         puppet.SetActive(false);
         puppet1.SetActive(false);
         puppet2.SetActive(false);
@@ -47,8 +50,6 @@ public class Win : MonoBehaviour
         puppet6.SetActive(false);
         puppet7.SetActive(false);
         puppet8.SetActive(false);
-        scrolla = 0;
-        wall.SetActive(true);
         texte.SetActive(false);
         //.!.
         mus.SetActive(true);

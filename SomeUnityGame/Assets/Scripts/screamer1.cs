@@ -17,7 +17,7 @@ public class screamer1 : MonoBehaviour
     void Start()
     {
         DollB.SetActive(false);
-        Doll.SetActive(false);
+        Doll.SetActive(true);
     }
     void Update()
     {
