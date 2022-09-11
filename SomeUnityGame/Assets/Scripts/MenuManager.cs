@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+
+    public bool gamem = false;
+    public GameObject Gamemode;
+
     public GameObject Question;
     public GameObject LoadingScreen;
     public Slider Bar;
@@ -58,6 +62,18 @@ public class MenuManager : MonoBehaviour
         else
         {
             Controls.SetActive(false);
+        }
+    }
+    public void GameMode()
+    {
+        gamem = !gamem;
+        if (gamem)
+        {
+            Gamemode.SetActive(true);
+        }
+        else
+        {
+            Gamemode.SetActive(false);
         }
     }
 }
