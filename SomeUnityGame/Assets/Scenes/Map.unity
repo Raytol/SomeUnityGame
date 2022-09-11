@@ -84279,7 +84279,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041E\u0431\u0449\u0435\u0435 \u0432\u0440\u0435\u043C\u044F \u0438\u0433\u0440\u044B"
+  m_Text: time has passed
 --- !u!222 &1601104322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -84506,7 +84506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1605450787
 MonoBehaviour:
   m_ObjectHideFlags: 0
