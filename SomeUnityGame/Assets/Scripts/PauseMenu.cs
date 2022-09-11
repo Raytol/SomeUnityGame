@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.M) && isMapClaimed)
+        if(Input.GetKeyDown(KeyCode.M) && isMapClaimed && Player_Move.easy == true)
         {
             isMapOpen = !isMapOpen;
             if (isMapOpen)
