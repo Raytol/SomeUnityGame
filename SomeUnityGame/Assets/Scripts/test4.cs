@@ -29,18 +29,6 @@ public class test4 : MonoBehaviour
 
     void Start()
     {
-        if (Player_Move.easy == true)
-        {
-            ViewDistance = 40f;
-            DetectionDistance = 40f;
-            m_MyAudioSource.maxDistance = 60f;
-        }
-        else if (Player_Move.easy == false)
-        {
-            ViewDistance = 50f;
-            DetectionDistance = 50f;
-            m_MyAudioSource.maxDistance = 40f;
-        }
         m_MyAudioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -53,6 +41,18 @@ public class test4 : MonoBehaviour
     }
     void Update()
     {
+        if (Player_Move.easy == true)
+        {
+            ViewDistance = 40f;
+            DetectionDistance = 40f;
+            m_MyAudioSource.maxDistance = 60f;
+        }
+        else if (Player_Move.easy == false)
+        {
+            ViewDistance = 50f;
+            DetectionDistance = 50f;
+            m_MyAudioSource.maxDistance = 40f;
+        }
 
         float distanceToPlayer = Vector3.Distance(Player.transform.position, _navMeshAgent.transform.position);
 
