@@ -48,6 +48,7 @@ public class PlayerRay : MonoBehaviour
     public GameObject TriggerSoundCollider;
     public AudioSource RealPhoneSound1;
     public AudioSource GoodKi;
+    public PauseMenu MapPause;
     private bool trigger2 = false;
     private bool IsPhoneActive = false;
     public GameObject godki;
@@ -124,6 +125,7 @@ public class PlayerRay : MonoBehaviour
                 Win.mapa = true;
                 Map.SetActive(false);
                 trigger.trigger1 = true;
+                MapPause.isMapClaimed = true;
                 DoorSound.Play();
             }
             else if (hit.collider.gameObject == MusicObj)

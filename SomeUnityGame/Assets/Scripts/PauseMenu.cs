@@ -11,14 +11,30 @@ public class PauseMenu : MonoBehaviour
     public Player_Move playermove;
     [SerializeField] KeyCode keymenupaused;
     bool isMenuPaused = false;
+    public GameObject Map;
+    public bool isMapOpen = false;
+    public bool isMapClaimed = false;
 
     private void Start()
     {
+        Map.SetActive(false);
         MenuPaused.SetActive(false);
     }
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.M) && isMapClaimed)
+        {
+            isMapOpen = !isMapOpen;
+            if (isMapOpen)
+            {
+                Map.SetActive(true);
+            }
+            else
+            {
+                Map.SetActive(false);
+            }
+        }
         ActiveMenu();
     }
 
