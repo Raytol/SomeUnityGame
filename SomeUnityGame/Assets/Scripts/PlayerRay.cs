@@ -50,6 +50,7 @@ public class PlayerRay : MonoBehaviour
     public AudioSource GoodKi;
     private bool trigger2 = false;
     private bool IsPhoneActive = false;
+    public GameObject godki;
     //public Text ProposedText;
 
     private void Start()
@@ -78,6 +79,7 @@ public class PlayerRay : MonoBehaviour
         scroll.SetActive(true);
         Book.SetActive(true);
         Map.SetActive(true);
+        godki.SetActive(false);
     }
 
     void Update()
@@ -94,7 +96,6 @@ public class PlayerRay : MonoBehaviour
         //        ProposedText.text = "";
         //    }
         //}
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             Raytrue();
@@ -237,16 +238,17 @@ public class PlayerRay : MonoBehaviour
             }
             else if(hit.collider.gameObject == NearPhone)
             {
-                IsPhoneActive = !IsPhoneActive;
-                if (IsPhoneActive)
+                if (!IsPhoneActive)
                 {
+                    IsPhoneActive = !IsPhoneActive;
                     trigger2 = true;
                     Destroy(TriggerSoundCollider);
                     RealPhoneSound1.Play();
-                    GoodKi.Play();
+
                 }
                 else
                 {
+                    godki.SetActive(true);
                     RealPhoneSound1.Stop();
                 }
             }
