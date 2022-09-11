@@ -163,80 +163,110 @@ public class PlayerRay : MonoBehaviour
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls1.SetActive(false);
-                kscrolls1.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls1.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls2)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls2.SetActive(false);
-                kscrolls2.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls2.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls3)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls3.SetActive(false);
-                kscrolls3.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls3.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls4)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls4.SetActive(false);
-                kscrolls4.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls4.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls5)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls5.SetActive(false);
-                kscrolls5.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls5.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls6)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls6.SetActive(false);
-                kscrolls6.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls6.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls7)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls7.SetActive(false);
-                kscrolls7.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls7.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls8)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls8.SetActive(false);
-                kscrolls8.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls8.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls9)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls9.SetActive(false);
-                kscrolls9.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls9.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if (hit.collider.gameObject == scrolls10)
             {
                 paper.sound = true;
                 Win.scrolla = Win.scrolla + 1;
                 scrolls10.SetActive(false);
-                kscrolls10.SetActive(true);
-                ScrollSound.Play();
+                if (Player_Move.easy == true)
+                {
+                    kscrolls10.SetActive(true);
+                    ScrollSound.Play();
+                }
             }
             else if(hit.collider.gameObject == NearPhone)
             {

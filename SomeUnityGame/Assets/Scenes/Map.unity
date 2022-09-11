@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.06
@@ -19993,8 +19993,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 227679246}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -20995,8 +20993,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 252088591}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -29782,8 +29778,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 430681084}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -37329,8 +37323,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 786103677}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -37758,7 +37750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &812401291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46001,8 +45993,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 949879680}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -46524,8 +46514,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 965892942}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -49007,8 +48995,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 1080638146}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -72666,8 +72652,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 543450651879919037}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}
@@ -84506,7 +84490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1605450787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85275,8 +85259,6 @@ MonoBehaviour:
   M: 0
   LastPos: {x: 0, y: 0, z: 0}
   ViewAngle: 360
-  ViewDistance: 50
-  DetectionDistance: 50
   AgentBobby: {fileID: 1638074021}
   Player: {fileID: 1835433404}
   DIe: {fileID: 836411531}

@@ -11,6 +11,7 @@ public class test4 : MonoBehaviour
     float Y = -1f;
 
     public float M;
+    AudioSource m_MyAudioSource;
 
     private NavMeshAgent _navMeshAgent;
     private float changePosTime = 2f;
@@ -20,15 +21,27 @@ public class test4 : MonoBehaviour
     public Vector3 LastPos;
 
     [Range(0, 360)] public float ViewAngle = 90f;
-    public float ViewDistance = 15f;
-    public float DetectionDistance = 3f;
+    private float ViewDistance = 15f;
+    private float DetectionDistance = 3f;
     public Transform AgentBobby;
     public Transform Player;
     public GameObject DIe;
 
     void Start()
     {
-
+        if (Player_Move.easy == true)
+        {
+            ViewDistance = 40f;
+            DetectionDistance = 40f;
+            m_MyAudioSource.maxDistance = 60f;
+        }
+        else if (Player_Move.easy == false)
+        {
+            ViewDistance = 50f;
+            DetectionDistance = 50f;
+            m_MyAudioSource.maxDistance = 40f;
+        }
+        m_MyAudioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _navMeshAgent.updateRotation = false;
