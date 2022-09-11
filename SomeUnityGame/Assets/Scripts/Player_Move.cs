@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+    public static bool easy = true;
+
     public GameObject runa;
     public GameObject movea;
 
@@ -85,7 +87,7 @@ public class Player_Move : MonoBehaviour
             movea.SetActive(false);
             animaR();
             m_MyAudioSource.Stop();
-            run_time = run_time - 2;
+            run_time = run_time - 4;
             speed_Current = speed_Run;
             if (run_time == 0)
             {
@@ -108,7 +110,7 @@ public class Player_Move : MonoBehaviour
                 movea.SetActive(false);
             }
             speed_Current = speed_Move;
-            if (run_time >= 0 && run_time < run_timeP && run_gone == true)
+            if (run_gone == true)
             {
                 if (audioW == true)
                 {
@@ -116,13 +118,24 @@ public class Player_Move : MonoBehaviour
                     m_MyAudioSource.Play();
                 }
 
-                //print("3");
                 run_time = run_time + 1;
                 if (run_time == run_timeP)
                 {
+
                     m_MyAudioSource.Stop();
                     run_gone = false;
                 }
+                print("slow");
+            }
+            if (easy == true && run_time < run_timeP && run_gone == false)
+            {
+                print("ez");
+                run_time = run_time + 2;
+            }
+            if (easy == false && run_time < run_timeP && run_gone == false && Stay == true)
+            {
+                print("hard");
+                run_time = run_time + 2;
             }
         }
         player.Move(move_Direction * speed_Current * Time.deltaTime);
