@@ -19,7 +19,6 @@ public class video : MonoBehaviour
         player.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         elapsedTime += Time.deltaTime;
