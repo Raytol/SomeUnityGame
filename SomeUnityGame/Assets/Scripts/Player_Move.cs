@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Move : MonoBehaviour
 {
@@ -30,11 +31,12 @@ public class Player_Move : MonoBehaviour
     Vector3 move_Direction;
     public bool run_gone = false;
     public bool audioW = false;
-    public int run_timeP;
-    public int run_time;
+    public float run_timeP;
+    public float run_time;
     public Camera Cam;
     public GameObject Seat;
     public GameObject Normal;
+    public Slider Bar;  
 
 
     void Start()
@@ -49,6 +51,7 @@ public class Player_Move : MonoBehaviour
 
     void Update()
     {
+        Bar.value = run_time;
         Move();
     }
 
