@@ -30,7 +30,6 @@ public class video : MonoBehaviour
             cam.SetActive(false);
             kak = false;
             videos.SetActive(false);
-            slider.SetActive(true);
         }
         else
         {
@@ -42,6 +41,7 @@ public class video : MonoBehaviour
                 }
                 if (elapsedTime > 16.0f)
                 {
+                    slider.SetActive(true);
                     videotwo.a = 2;
                 }
                 else

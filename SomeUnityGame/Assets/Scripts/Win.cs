@@ -6,8 +6,6 @@ public class Win : MonoBehaviour
 {
     public GameObject text4;
     public GameObject mus;
-    float elapsedTime = 0.0f;
-    public GameObject texte;
     public GameObject scrollend;
     public GameObject puppet;
     public GameObject puppet1;
@@ -54,8 +52,6 @@ public class Win : MonoBehaviour
         puppet6.SetActive(false);
         puppet7.SetActive(false);
         puppet8.SetActive(false);
-        texte.SetActive(false);
-        //.!.
         mus.SetActive(true);
         Escape.SetActive(false);
         scrollend.SetActive(false);
@@ -77,7 +73,6 @@ public class Win : MonoBehaviour
         if (scrolla == 11)
         {
             puppet8.SetActive(true);
-            elapsedTime += Time.deltaTime;
             text4.SetActive(true);
             wall.SetActive(false);
             Escape.SetActive(true);

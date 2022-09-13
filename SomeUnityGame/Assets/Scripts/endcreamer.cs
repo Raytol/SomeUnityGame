@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class endcreamer : MonoBehaviour
 {
+    public GameObject slider;
     public GameObject credits;
     float elapsedTime = 0.0f;
     public int aa;
@@ -13,6 +14,7 @@ public class endcreamer : MonoBehaviour
 
     void Update()
     {
+        slider.SetActive(true);
         if (a < aa)
         {
             Body.transform.Translate(0, y, 0);

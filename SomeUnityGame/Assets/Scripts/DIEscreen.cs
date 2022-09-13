@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DIEscreen : MonoBehaviour
 {
+    public GameObject slide;
     public GameObject sounddie;
     public GameObject puppet;
     public GameObject sound;
@@ -24,6 +25,7 @@ public class DIEscreen : MonoBehaviour
 
     void Update()
     {
+        slide.SetActive(false);
         puppet.SetActive(false);
         sound.SetActive(false); 
         elapsedTime += Time.deltaTime;
