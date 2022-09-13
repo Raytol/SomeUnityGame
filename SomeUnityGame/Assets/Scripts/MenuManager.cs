@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-
+    private bool lobbysee = false;
+    public GameObject lobby;
+    public GameObject bebes;
+    public GameObject tips;
     public bool gamem = false;
     public GameObject Gamemode;
 
@@ -16,6 +19,12 @@ public class MenuManager : MonoBehaviour
     public Text ProgressText;
     public GameObject Controls;
     public bool ControlsIsActive = false;
+    void Start()
+    {
+        lobby.SetActive(false);
+        bebes.SetActive(true);
+        tips.SetActive(false);
+    }
     public void Play()
     {
         LoadingScreen.SetActive(true);
@@ -74,6 +83,24 @@ public class MenuManager : MonoBehaviour
         else
         {
             Gamemode.SetActive(false);
+        }
+    }
+    public void tipss()
+    {
+        tips.SetActive(true);
+        bebes.SetActive(false);
+    }
+    public void online()
+    {
+        if (lobbysee == false)
+        {
+            lobby.SetActive(true);
+            lobbysee = true;
+        }
+        else
+        {
+            lobby.SetActive(false);
+            lobbysee = false;
         }
     }
 }
