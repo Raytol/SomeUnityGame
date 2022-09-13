@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class MenuManager : MonoBehaviour
     public GameObject Question;
     public GameObject LoadingScreen;
     public Slider Bar;
-    public Text ProgressText;
+    public TMP_Text ProgressText;
     public GameObject Controls;
     public bool ControlsIsActive = false;
     void Start()
