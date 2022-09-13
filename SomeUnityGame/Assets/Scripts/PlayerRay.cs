@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class PlayerRay : MonoBehaviour
 {
+    public static bool call2;
+    public GameObject text1;
+    public GameObject text2;
+    public GameObject text2COLLIDER;
+
+    private bool a1;
+    private bool a2;
     public GameObject scrolls1;
     public GameObject scrolls2;
     public GameObject scrolls3;
@@ -56,6 +63,12 @@ public class PlayerRay : MonoBehaviour
 
     private void Start()
     {
+        text2COLLIDER.SetActive(false);
+        text2.SetActive(false);
+        call2 = false;
+        text1.SetActive(false);
+        a1 = false;
+        a2 = false;
         scrolls1.SetActive(true);
         scrolls2.SetActive(true);
         scrolls3.SetActive(true);
@@ -79,7 +92,6 @@ public class PlayerRay : MonoBehaviour
         scrolls.SetActive(false);
         scroll.SetActive(true);
         Book.SetActive(true);
-        Map.SetActive(true);
         godki.SetActive(false);
     }
 
@@ -97,12 +109,19 @@ public class PlayerRay : MonoBehaviour
         //        ProposedText.text = "";
         //    }
         //}
+        if (a1 == true && a2 == true)
+        {
+            DoorSound.Play();
+            trigger.trigger1 = true;
+            a1 = false;
+            a2 = false;
+            text2COLLIDER.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             Raytrue();
         }
     }
-
     void Raytrue()
     {
         RaycastHit hit;
@@ -111,9 +130,15 @@ public class PlayerRay : MonoBehaviour
             Debug.Log(hit.transform.name);
             if (hit.collider.gameObject == Book)
             {
+                a2 = true;
+                if (Player_Move.easy == false)
+                {
+                    a1 = true;
+                }
                 paper.sound = true;
                 Win.book = true;
                 Book.SetActive(false);
+                Win.mapa = true;
             }
             else if (hit.collider.name == "EnterCollider")
             {
@@ -121,12 +146,10 @@ public class PlayerRay : MonoBehaviour
             }
             else if (hit.collider.gameObject == Map)
             {
+                a1 = true;
                 paper.sound = true;
-                Win.mapa = true;
                 Map.SetActive(false);
-                trigger.trigger1 = true;
                 MapPause.isMapClaimed = true;
-                DoorSound.Play();
             }
             else if (hit.collider.gameObject == MusicObj)
             {
@@ -272,6 +295,7 @@ public class PlayerRay : MonoBehaviour
             {
                 if (!IsPhoneActive)
                 {
+                    text1.SetActive(true);
                     IsPhoneActive = !IsPhoneActive;
                     trigger2 = true;
                     Destroy(TriggerSoundCollider);
@@ -280,8 +304,19 @@ public class PlayerRay : MonoBehaviour
                 }
                 else
                 {
-                    godki.SetActive(true);
-                    RealPhoneSound1.Stop();
+                    if (call2 == true)
+                    {
+                        text2.SetActive(true);
+                        RealPhoneSound1.Play();
+                        trigger2 = true;
+                        call2 = false;
+                        Destroy(text2COLLIDER);
+                    }
+                    else
+                    {
+                        godki.SetActive(true);
+                        RealPhoneSound1.Stop();
+                    }
                 }
             }
         }
