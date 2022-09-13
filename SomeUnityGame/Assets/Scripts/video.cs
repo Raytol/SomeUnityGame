@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class video : MonoBehaviour
 {
+    public GameObject slider;
     public GameObject cam;
     private bool kak = true;
     private float kek = 0;
@@ -13,6 +14,7 @@ public class video : MonoBehaviour
     public GameObject player;
     void Start()
     {
+        slider.SetActive(false);
         names.SetActive(false);
         kak = true;
         cam.SetActive(true);
@@ -28,6 +30,7 @@ public class video : MonoBehaviour
             cam.SetActive(false);
             kak = false;
             videos.SetActive(false);
+            slider.SetActive(true);
         }
         else
         {

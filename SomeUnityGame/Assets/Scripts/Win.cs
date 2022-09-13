@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
+    public GameObject text4;
     public GameObject mus;
     float elapsedTime = 0.0f;
     public GameObject texte;
@@ -39,6 +40,7 @@ public class Win : MonoBehaviour
 
     void Start()
     {
+        text4.SetActive(false);
         scrollas = scrolla;
         mapa = false;
         scrolla = 0;
@@ -76,14 +78,7 @@ public class Win : MonoBehaviour
         {
             puppet8.SetActive(true);
             elapsedTime += Time.deltaTime;
-            if (elapsedTime > 4.0f)
-            {
-                texte.SetActive(false);
-            }
-            else
-            {
-                texte.SetActive(true);
-            }
+            text4.SetActive(true);
             wall.SetActive(false);
             Escape.SetActive(true);
 
