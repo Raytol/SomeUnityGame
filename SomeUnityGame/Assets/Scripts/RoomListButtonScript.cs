@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Photon.Realtime;
+using Photon.Pun;
 
 public class RoomListButtonScript : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class RoomListButtonScript : MonoBehaviour
 
     public void OnClick()
     {
-        Launcher.instance.JoinRoom(_info);
+        if (PhotonNetwork.NetworkClientState == ClientState.ConnectedToMasterServer)
+        {
+            Launcher.instance.JoinRoom(_info);
+        }
     }
 }
