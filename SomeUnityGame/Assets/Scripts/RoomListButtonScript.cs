@@ -8,7 +8,7 @@ using Photon.Pun;
 public class RoomListButtonScript : MonoBehaviour
 {
     [SerializeField] private TMP_Text roomName;
-    private RoomInfo _info;
+    public RoomInfo _info;
 
     public void SetUP(RoomInfo roomInfo)
     {
@@ -18,6 +18,7 @@ public class RoomListButtonScript : MonoBehaviour
 
     public void OnClick()
     {
+        print(PhotonNetwork.NetworkClientState);
         Launcher.instance.JoinRoom(_info);
     }
 }

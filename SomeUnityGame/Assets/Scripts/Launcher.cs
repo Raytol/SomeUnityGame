@@ -19,6 +19,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject AvailableRooms;
     [SerializeField] private Transform RoomList;
     [SerializeField] private GameObject RoomButtonPrefab;
+    [SerializeField] private Transform playerlist;
+    [SerializeField] private GameObject PlayerNamePrefab;
 
     public void Start()
     {
@@ -39,6 +41,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         LoadingScreen.SetActive(false);
         Debug.Log("Присоединились к Лобби");
         LobbyMenu.SetActive(true);
+        PhotonNetwork.NickName = "Player " + Random.Range(0, 100);
     }
 
     public void CreateRoom()
@@ -53,10 +56,22 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        AvailableRooms.SetActive(false);
         LoadingScreen.SetActive(false);
         RoomStandart.SetActive(true);
-        RoomNameText.text = LobbyName.text;
+        RoomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
+        Player[] players = PhotonNetwork.PlayerList;
+
+        for (int i = 0; i < playerlist.childCount; i++)
+        { 
+            Destroy(playerlist.GetChild(i).gameObject);
+        }
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            Instantiate(PlayerNamePrefab, playerlist).GetComponent<PlayerListItem>().SetUp(players[i]);
+        }
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -105,7 +120,14 @@ public class Launcher : MonoBehaviourPunCallbacks
         }
         for (int i = 0; i < roomList.Count; i++)
         {
+            if (roomList[i].RemovedFromList)
+                continue;
             Instantiate(RoomButtonPrefab, RoomList).GetComponent<RoomListButtonScript>().SetUP(roomList[i]);
         }
+    }
+
+    public override void OnPlayerEnteredRoom(Player player)
+    {
+        Instantiate(PlayerNamePrefab, playerlist).GetComponent<PlayerListItem>().SetUp(player);
     }
 }
