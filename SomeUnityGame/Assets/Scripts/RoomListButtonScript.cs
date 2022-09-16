@@ -18,9 +18,6 @@ public class RoomListButtonScript : MonoBehaviour
 
     public void OnClick()
     {
-        if (PhotonNetwork.NetworkClientState == ClientState.ConnectedToMasterServer)
-        {
-            Launcher.instance.JoinRoom(_info);
-        }
+        Launcher.instance.JoinRoom(_info);
     }
 }
