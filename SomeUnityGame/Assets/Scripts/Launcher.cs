@@ -20,7 +20,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] private Transform RoomList;
     [SerializeField] private GameObject RoomButtonPrefab;
 
-    void Start()
+    public void Start()
     {
         instance = this;
         Debug.Log("Подключение к Мастер серверу");
